@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {offsetY > 50 ? (
+      {offsetY > 1 ? (
         <React.Fragment>
           <Navbar />
           <Header siteTitle={data.site.siteMetadata.title} />
