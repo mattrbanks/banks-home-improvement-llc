@@ -8,7 +8,10 @@ const Header = () => {
     <div className="h-screen bg-main-img bg-cover relative">
       <div className="w-full h-20 bg-white bg-opacity-90 absolute top-0 left-0 text-white border flex">
         <img className="w-10 mx-4 my-4" alt="mb logo" src={richlogo} />
-        <div className="text-black mx-5 my-5 text-2xl w-1/2">
+        <div
+          style={{ textDecoration: "underline red" }}
+          className="text-black mx-5 my-5 text-2xl w-1/2"
+        >
           Rich's Property Maintenance LLC
         </div>
         <div className="flex justify-end w-1/2">
