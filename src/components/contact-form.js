@@ -7,7 +7,7 @@ const ContactForm = () => {
   const [message, setMessage] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [subject, setSubject] = React.useState("");
-  const [image, setImage] = React.useState("");
+  const [image, setImage] = React.useState(null);
 
   const encode = (data) => {
     return Object.keys(data)
@@ -21,8 +21,13 @@ const ContactForm = () => {
     if (!event.target.files[0]) {
       setFile(file);
     } else {
-      setFile(URL.createObjectURL(event.target.files[0]));
-      setImage(file);
+      let imageCopy = URL.createObjectURL(event.target.files[0]).slice();
+      setFile(imageCopy);
+      setImage(URL.createObjectURL(event.target.files[0]));
+      //   setFile(URL.createObjectURL(event.target.files[0]));
+      //   console.log(imageCopy);
+      //   setImage(imageCopy);
+      //   console.log(image);
     }
   }
 
@@ -63,13 +68,13 @@ const ContactForm = () => {
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="full-name"
+              htmlFor="name"
             >
               Full Name
             </label>
             <input
               className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              name="full-name"
+              name="name"
               type="text"
               placeholder="full name"
               required
@@ -97,13 +102,13 @@ const ContactForm = () => {
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              htmlFor="phone-number"
+              htmlFor="phone"
             >
               Phone Number
             </label>
             <input
               className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              name="phone-number"
+              name="phone"
               type="text"
               placeholder="(xxx) xxx-xxxx"
               required
