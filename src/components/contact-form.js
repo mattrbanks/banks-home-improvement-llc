@@ -44,7 +44,8 @@ const ContactForm = () => {
   function handleSubmit(event) {
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "multipart/form-data" }, //multipart/form-data
+      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...contactInfo }),
     })
       .then(() => alert("Success!"))
