@@ -23,7 +23,7 @@ const ContactForm = () => {
     } else {
       let imageCopy = URL.createObjectURL(event.target.files[0]).slice();
       setFile(imageCopy);
-      setImage(URL.createObjectURL(event.target.files[0]));
+      setImage(event.target.files[0]);
       //   setFile(URL.createObjectURL(event.target.files[0]));
       //   console.log(imageCopy);
       //   setImage(imageCopy);
@@ -175,6 +175,7 @@ const ContactForm = () => {
                   type="file"
                   onChange={handleImageChange}
                   className="hidden"
+                  name="image"
                 />
               </label>
             </div>
