@@ -5,9 +5,17 @@ const ContactForm = () => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
-  const [phone, setPhone] = React.useState(""); //needs form field
+  const [phone, setPhone] = React.useState("");
   const [subject, setSubject] = React.useState("");
   const [image, setImage] = React.useState("");
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
 
   function handleImageChange(event) {
     if (!event.target.files[0]) {
@@ -18,13 +26,8 @@ const ContactForm = () => {
     }
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    //Do I need to do something else here?
-  }
-
   const contactInfo = {
-    //Will I use this variable with Netlify?
+    //this may need key value pairs to work; not just the value alone
     name,
     email,
     message,
@@ -33,9 +36,29 @@ const ContactForm = () => {
     image, // This is currently optional and will be an empty string if the user does not attach an image of the job.
   };
 
+  function handleSubmit(event) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...contactInfo }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    event.preventDefault();
+  }
+
   return (
     <div className="flex justify-center my-6">
-      <form className="w-full max-w-lg" onSubmit={handleSubmit}>
+      <form
+        className="w-full max-w-lg"
+        onSubmit={handleSubmit}
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
@@ -71,9 +94,24 @@ const ContactForm = () => {
               onChange={(e) => setSubject(e.target.value)}
             ></input>
           </div>
-        </div>
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="phone-number"
+            >
+              Phone Number
+            </label>
+            <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              name="phone-number"
+              type="text"
+              placeholder="(xxx) xxx-xxxx"
+              required
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            ></input>
+          </div>
+          <div className="w-full md:w-1/2 px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               htmlFor="email"
