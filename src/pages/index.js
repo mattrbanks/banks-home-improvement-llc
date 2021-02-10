@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import ContactForm from "../components/contact-form";
 import Testimonials from "../components/testimonials";
 import Gallery from "../components/gallery";
-import Services from "./services";
+import ServicesComp from "../components/services";
 
 //import SEO from "../components/seo";
 //import ImageReusable from "../components/imageReusable";
@@ -14,6 +14,7 @@ const IndexPage = () => {
     <Layout>
       <main>
         <title>RPM Home</title>
+        <div className="h-screen bg-main-img bg-cover relative"></div>
         <h1>
           Welcome to the rich's property maintenance llc home page
           <br />
@@ -22,8 +23,8 @@ const IndexPage = () => {
           rich's property maintenance llc is a place where all your home
           maintenance needs.
         </p>
-        <div className="w-full h-screen border">
-          <Services />
+        <div className="w-full border">
+          <ServicesComp />
         </div>
         <div className="w-full h-screen border">
           <Gallery />
@@ -31,7 +32,7 @@ const IndexPage = () => {
         <div className="w-full h-screen border">
           <Testimonials />
         </div>
-        <div className="w-full h-screen border">
+        <div className="w-full border">
           <ContactForm />
         </div>
         <div className="w-full h-64 border px-4 py-4">
