@@ -32,10 +32,10 @@ const IndexPage = () => {
         <div className="w-full h-screen border">
           <Testimonials />
         </div>
-        <div className="w-full border">
+        <div className="w-full">
           <ContactForm />
         </div>
-        <div className="w-full h-64 border px-4 py-4">
+        <div className="w-full h-64 px-4 py-4">
           <Footer />
         </div>
       </main>

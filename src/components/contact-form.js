@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 const ContactForm = () => {
   const [file, setFile] = React.useState(null);
@@ -17,13 +18,28 @@ const ContactForm = () => {
       .join("&");
   };
 
+  //   const encode = (data) => {
+  //     const formData = new FormData();
+
+  //     return Object.keys(data).map((key) => formData.append(key, data[key]));
+  //   };
+
+  //   const encodeData = (data) => {
+  //     const formData = new FormData();
+
+  //     Object.keys(data).forEach((key) => formData.append(key, data[key]));
+
+  //     return formData;
+  //   };
+
   function handleImageChange(event) {
     if (!event.target.files[0]) {
       setFile(file);
     } else {
       let imageCopy = URL.createObjectURL(event.target.files[0]).slice();
       setFile(imageCopy);
-      setImage(event.target.files[0]);
+      //setImage(event.target.files[0]);
+      setImage(URL.createObjectURL(event.target.files[0]));
       //   setFile(URL.createObjectURL(event.target.files[0]));
       //   console.log(imageCopy);
       //   setImage(imageCopy);
@@ -41,17 +57,34 @@ const ContactForm = () => {
     image, // This is currently optional and will be an empty string if the user does not attach an image of the job.
   };
 
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+
+  //     const form = e.target;
+
+  //     axios({
+  //       url: "/",
+  //       method: "POST",
+  //       data: this.encodeData({
+  //         "form-name": form.getAttribute("name"),
+  //         files: this.state.zippedFiles,
+  //       }),
+  //     });
+  //   };
+
   function handleSubmit(event) {
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "multipart/form-data" }, //multipart/form-data
-      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //headers: { "Content-Type": "multipart/form-data" }, //multipart/form-data
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...contactInfo }),
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
 
     event.preventDefault();
+    console.log(contactInfo);
+    console.log(image.name);
   }
 
   return (
