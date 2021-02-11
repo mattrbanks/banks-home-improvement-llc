@@ -3,18 +3,17 @@ import React from "react";
 const ServicesComp = () => {
   return (
     <React.Fragment>
-      <div>
-        <p className="text-black font-bold text-5xl my-6 text-center">
-          Services we offer
-        </p>
+      <div className="flex justify-center">
+        <div className="h-8 w-8 bg-red-800 mt-9 mr-2"></div>
+        <p className="text-black font-bold text-5xl my-6">Services We Offer</p>
       </div>
-      <div className="flex justify-around my-6 mx-6">
-        <div className="max-w-md w-full lg:flex">
+      <div className="flex justify-evenly my-6 mx-6">
+        <div className="max-w-md w-full lg:flex shadow-xl mb-8">
           <div
             className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             style={{
               backgroundImage:
-                "url('https://tailwindcss.com/img/card-left.jpg')",
+                "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/IMG_3971001.jpg?raw=true')",
             }}
             title="Woman holding a mug"
           ></div>
@@ -54,7 +53,7 @@ const ServicesComp = () => {
           </div>
         </div>
 
-        <div className="max-w-md w-full lg:flex">
+        <div className="max-w-md w-full lg:flex shadow-xl mb-8">
           <div
             className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             style={{
@@ -79,10 +78,9 @@ const ServicesComp = () => {
                 Maintenance
               </div>
               <p className="text-grey-darker text-base">
-                I will be glad to contract with the party involved to maintain
-                the property and the home itself while it's vacant. I can also
-                winterize the home if it will be vacant for some time. I hope
-                that clarifies the types of contracts I am looking for.
+                We are happy to contract with the party involved to maintain the
+                property and the home itself while it's vacant. We can also
+                winterize the home if it will be vacant for some time.
               </p>
             </div>
             {/* <div className="flex items-center">
@@ -100,8 +98,8 @@ const ServicesComp = () => {
         </div>
       </div>
 
-      <div className="flex justify-around my-6 mx-6">
-        <div className="max-w-md w-full lg:flex">
+      <div className="flex justify-evenly my-6 mx-6">
+        <div className="max-w-md w-full lg:flex shadow-xl mb-8">
           <div
             className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             style={{
@@ -126,10 +124,9 @@ const ServicesComp = () => {
                 Limited Moving
               </div>
               <p className="text-grey-darker text-base">
-                I do some moving as well, depending on the job. I am not a
-                moving company but since I do debris removal, I can also move
-                some household items and furniture, but, I am not moving an
-                entire home if I can avoid it.
+                We do some limited moving depending on the job. We are not a
+                moving company but we can move some household items and
+                furniture. We do not move entire homes.
               </p>
             </div>
             {/* <div className="flex items-center">
@@ -146,7 +143,7 @@ const ServicesComp = () => {
           </div>
         </div>
 
-        <div className="max-w-md w-full lg:flex">
+        <div className="max-w-md w-full lg:flex shadow-xl mb-8">
           <div
             className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             style={{
@@ -171,10 +168,10 @@ const ServicesComp = () => {
                 Landscaping
               </div>
               <p className="text-grey-darker text-base">
-                We do mowing, seeding, leaf removal, tree and bush removal,
-                raking, etc. We also do debris removal from inside or outside
-                the home. There are additional fees if it involves hazardous
-                waste like motor oil, paint cans, insulation, etc.
+                We do mowing, seeding, leaf removal, tree/bush removal, raking,
+                etc. We also do debris removal from inside or outside the home.
+                There are additional fees if it involves hazardous waste like
+                motor oil, paint cans, insulation, etc.
               </p>
             </div>
             {/* <div className="flex items-center">
