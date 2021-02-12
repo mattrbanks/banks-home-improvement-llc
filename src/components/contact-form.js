@@ -1,6 +1,16 @@
 import React from "react";
 import axios from "axios";
 
+function encode(data) {
+  const formData = new FormData();
+
+  for (const key of Object.keys(data)) {
+    formData.append(key, data[key]);
+  }
+
+  return formData;
+}
+
 const ContactForm = () => {
   const [file, setFile] = React.useState(null);
   const [name, setName] = React.useState("");
@@ -8,15 +18,23 @@ const ContactForm = () => {
   const [message, setMessage] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [subject, setSubject] = React.useState("");
-  const [image, setImage] = React.useState(null);
+  const [image, setImage] = React.useState("");
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+  //   const encode = (data) => {
+  //     return Object.keys(data)
+  //       .map(
+  //         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+  //       )
+  //       .join("&");
+  //   };
+
+  //   const encode = (data) => {
+  //     return Object.keys(data)
+  //       .map(
+  //         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+  //       )
+  //       .join("&");
+  //   };
 
   //   const encode = (data) => {
   //     const formData = new FormData();
@@ -32,6 +50,24 @@ const ContactForm = () => {
   //     return formData;
   //   };
 
+  //   function encode(data) {
+  //     const formData = new FormData();
+
+  //     for (const key of Object.keys(data)) {
+  //       if (key === "repairs_files") {
+  //         const files = Object.entries(data[key]);
+  //         let filesArr = [];
+  //         files.map((file) => {
+  //           return filesArr.push(file[1]);
+  //         });
+  //         formData.append(key, filesArr);
+  //       } else {
+  //         formData.append(key, data[key]);
+  //       }
+  //     }
+  //     return formData;
+  //   }
+
   function handleImageChange(event) {
     if (!event.target.files[0]) {
       setFile(file);
@@ -39,7 +75,7 @@ const ContactForm = () => {
       let imageCopy = URL.createObjectURL(event.target.files[0]).slice();
       setFile(imageCopy);
       //setImage(event.target.files[0]);
-      setImage(URL.createObjectURL(event.target.files[0]));
+      setImage(event.target.files[0]);
       //   setFile(URL.createObjectURL(event.target.files[0]));
       //   console.log(imageCopy);
       //   setImage(imageCopy);
@@ -76,7 +112,7 @@ const ContactForm = () => {
     fetch("/", {
       method: "POST",
       //headers: { "Content-Type": "multipart/form-data" }, //multipart/form-data
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...contactInfo }),
     })
       .then(() => alert("Success!"))
@@ -84,6 +120,7 @@ const ContactForm = () => {
 
     event.preventDefault();
     console.log(contactInfo);
+    console.log(typeof contactInfo.image);
     console.log(image.name);
   }
 
@@ -218,6 +255,9 @@ const ContactForm = () => {
               <img src={file} />
             </div>
           </div>
+        </div>
+        <div>
+          <div data-netlify-recaptcha="true"></div>
         </div>
         <div className="md:flex md:items-center">
           <div className="md:w-1/3">
