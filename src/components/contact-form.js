@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 
 function encode(data) {
   const formData = new FormData();
@@ -20,71 +19,17 @@ const ContactForm = () => {
   const [subject, setSubject] = React.useState("");
   const [image, setImage] = React.useState("");
 
-  //   const encode = (data) => {
-  //     return Object.keys(data)
-  //       .map(
-  //         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  //       )
-  //       .join("&");
-  //   };
-
-  //   const encode = (data) => {
-  //     return Object.keys(data)
-  //       .map(
-  //         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  //       )
-  //       .join("&");
-  //   };
-
-  //   const encode = (data) => {
-  //     const formData = new FormData();
-
-  //     return Object.keys(data).map((key) => formData.append(key, data[key]));
-  //   };
-
-  //   const encodeData = (data) => {
-  //     const formData = new FormData();
-
-  //     Object.keys(data).forEach((key) => formData.append(key, data[key]));
-
-  //     return formData;
-  //   };
-
-  //   function encode(data) {
-  //     const formData = new FormData();
-
-  //     for (const key of Object.keys(data)) {
-  //       if (key === "repairs_files") {
-  //         const files = Object.entries(data[key]);
-  //         let filesArr = [];
-  //         files.map((file) => {
-  //           return filesArr.push(file[1]);
-  //         });
-  //         formData.append(key, filesArr);
-  //       } else {
-  //         formData.append(key, data[key]);
-  //       }
-  //     }
-  //     return formData;
-  //   }
-
   function handleImageChange(event) {
     if (!event.target.files[0]) {
       setFile(file);
     } else {
       let imageCopy = URL.createObjectURL(event.target.files[0]).slice();
       setFile(imageCopy);
-      //setImage(event.target.files[0]);
       setImage(event.target.files[0]);
-      //   setFile(URL.createObjectURL(event.target.files[0]));
-      //   console.log(imageCopy);
-      //   setImage(imageCopy);
-      //   console.log(image);
     }
   }
 
   const contactInfo = {
-    //this may need key value pairs to work; not just the value alone
     name,
     email,
     message,
@@ -93,26 +38,9 @@ const ContactForm = () => {
     image, // This is currently optional and will be an empty string if the user does not attach an image of the job.
   };
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-
-  //     const form = e.target;
-
-  //     axios({
-  //       url: "/",
-  //       method: "POST",
-  //       data: this.encodeData({
-  //         "form-name": form.getAttribute("name"),
-  //         files: this.state.zippedFiles,
-  //       }),
-  //     });
-  //   };
-
   function handleSubmit(event) {
     fetch("/", {
       method: "POST",
-      //headers: { "Content-Type": "multipart/form-data" }, //multipart/form-data
-      //headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...contactInfo }),
     })
       .then(() => alert("Success!"))
@@ -133,6 +61,7 @@ const ContactForm = () => {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -256,9 +185,7 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div data-netlify-recaptcha="true"></div>
-        </div>
+        <div data-netlify-recaptcha="true"></div>
         <div className="md:flex md:items-center">
           <div className="md:w-1/3">
             <button
