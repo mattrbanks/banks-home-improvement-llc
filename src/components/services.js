@@ -8,9 +8,9 @@ const ServicesComp = () => {
         <p className="text-black font-bold text-5xl my-6">Services We Offer</p>
       </div>
       <div className="flex justify-evenly my-6 mx-6">
-        <div className="max-w-md w-full lg:flex shadow-xl mb-8">
+        <div className="max-w-xl w-full lg:flex shadow-xl mb-8">
           <div
-            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+            className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             style={{
               backgroundImage:
                 "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/IMG_3971001.jpg?raw=true')",
@@ -53,9 +53,9 @@ const ServicesComp = () => {
           </div>
         </div>
 
-        <div className="max-w-md w-full lg:flex shadow-xl mb-8">
+        <div className="max-w-xl w-full lg:flex shadow-xl mb-8">
           <div
-            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+            className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             style={{
               backgroundImage:
                 "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image11.jpeg?raw=true')",
@@ -99,9 +99,9 @@ const ServicesComp = () => {
       </div>
 
       <div className="flex justify-evenly my-6 mx-6">
-        <div className="max-w-md w-full lg:flex shadow-xl mb-8">
+        <div className="max-w-xl w-full lg:flex shadow-xl mb-8">
           <div
-            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+            className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             style={{
               backgroundImage:
                 "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image2(1).jpeg?raw=true')",
@@ -143,9 +143,9 @@ const ServicesComp = () => {
           </div>
         </div>
 
-        <div className="max-w-md w-full lg:flex shadow-xl mb-8">
+        <div className="max-w-xl w-full lg:flex shadow-xl mb-8">
           <div
-            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+            className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             style={{
               backgroundImage:
                 "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image3_1.jpeg?raw=true')",

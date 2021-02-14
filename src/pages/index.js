@@ -26,7 +26,7 @@ const IndexPage = () => {
         <div className="w-full border">
           <ServicesComp />
         </div>
-        <div className="w-full h-screen border">
+        <div className="w-full border">
           <Gallery />
         </div>
         <div className="w-full h-screen border">
