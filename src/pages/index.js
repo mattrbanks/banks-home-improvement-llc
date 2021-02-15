@@ -29,14 +29,11 @@ const IndexPage = () => {
         <div className="w-full border">
           <Gallery />
         </div>
-        <div className="w-full h-screen border">
-          <Testimonials />
-        </div>
         <div className="w-full">
           <ContactForm />
         </div>
-        <div className="w-full h-64 px-4 py-4">
-          <Footer />
+        <div className="w-full">
+          <Testimonials />
         </div>
       </main>
     </Layout>

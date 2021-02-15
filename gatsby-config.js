@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-recaptcha`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
