@@ -56,11 +56,11 @@ const ContactForm = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <script
+        {/* <script
           src={`https://www.google.com/recaptcha/api.js?r=${Math.random()}`}
           async
           defer
-        ></script>
+        ></script> */}
       </Helmet>
       <div className="flex justify-center my-6 mx-6">
         <div className="flex">
@@ -79,7 +79,7 @@ const ContactForm = () => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
+          //   data-netlify-recaptcha="true"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -203,10 +203,10 @@ const ContactForm = () => {
               </div>
             </div>
           </div>
-          <div
+          {/* <div
             className="g-recaptcha"
             data-sitekey={process.env.SITE_RECAPTCHA_KEY}
-          ></div>
+          ></div> */}
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
               <button
