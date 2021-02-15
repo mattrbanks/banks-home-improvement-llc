@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Recaptcha from "react-recaptcha";
 
 function encode(data) {
   const formData = new FormData();
@@ -19,6 +20,7 @@ const ContactForm = () => {
   const [phone, setPhone] = React.useState("");
   const [subject, setSubject] = React.useState("");
   const [image, setImage] = React.useState("");
+  const [isVerified, setIsVerified] = React.useState(false);
 
   function handleImageChange(event) {
     if (!event.target.files[0]) {
@@ -53,14 +55,26 @@ const ContactForm = () => {
     console.log(image.name);
   }
 
+  function recaptchaLoaded() {
+    console.log("recaptcha successfully loaded");
+  }
+
+  function verifyCallback(response) {
+    if (response) {
+      setIsVerified(true);
+    } else {
+      console.log("not verified!!!");
+    }
+  }
+
   return (
     <React.Fragment>
       <Helmet>
-        {/* <script
+        <script
           src={`https://www.google.com/recaptcha/api.js?r=${Math.random()}`}
           async
           defer
-        ></script> */}
+        ></script>
       </Helmet>
       <div className="flex justify-center my-6 mx-6">
         <div className="flex">
@@ -79,7 +93,7 @@ const ContactForm = () => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          //   data-netlify-recaptcha="true"
+          data-netlify-recaptcha="true"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -203,10 +217,12 @@ const ContactForm = () => {
               </div>
             </div>
           </div>
-          {/* <div
-            className="g-recaptcha"
-            data-sitekey={process.env.SITE_RECAPTCHA_KEY}
-          ></div> */}
+          <Recaptcha
+            sitekey="6LeS-1gaAAAAAPB1fBoYlD4ocOJ2SYA9_rg1VmWf"
+            render="explicit"
+            onloadCallback={recaptchaLoaded}
+            verifyCallback={verifyCallback}
+          />
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
               <button
