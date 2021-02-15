@@ -42,17 +42,22 @@ const ContactForm = () => {
   };
 
   function handleSubmit(event) {
-    fetch("/", {
-      method: "POST",
-      body: encode({ "form-name": "contact", ...contactInfo }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
+    if (isVerified) {
+      fetch("/", {
+        method: "POST",
+        body: encode({ "form-name": "contact", ...contactInfo }),
+      })
+        .then(() => alert("Success!"))
+        .catch((error) => alert(error));
 
-    event.preventDefault();
-    console.log(contactInfo);
-    console.log(typeof contactInfo.image);
-    console.log(image.name);
+      event.preventDefault();
+      console.log(contactInfo);
+      console.log(typeof contactInfo.image);
+      console.log(image.name);
+    } else {
+      event.preventDefault();
+      alert("Please verify that you are a human!");
+    }
   }
 
   function recaptchaLoaded() {
