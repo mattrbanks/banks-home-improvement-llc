@@ -98,7 +98,7 @@ const ContactForm = () => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
+          //data-netlify-recaptcha="true"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-wrap -mx-3 mb-6">
