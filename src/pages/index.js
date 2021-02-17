@@ -23,6 +23,11 @@ const IndexPage = () => {
           rich's property maintenance llc is a place where all your home
           maintenance needs.
         </p>
+        <div className="">
+          <a href="tel:+496170961709">
+            <p>Get A Quote: (xxx) xxx-xxxx</p>
+          </a>
+        </div>
         <div className="w-full border">
           <ServicesComp />
         </div>
@@ -32,7 +37,7 @@ const IndexPage = () => {
         <div className="w-full">
           <ContactForm />
         </div>
-        <div className="w-full">
+        <div className="w-full h-screen">
           <Testimonials />
         </div>
       </main>
