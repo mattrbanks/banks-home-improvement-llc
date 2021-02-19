@@ -13,6 +13,44 @@ const settings = {
   speed: 2000,
   slidesToShow: 3,
   slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        speed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        speed: 2000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        speed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 const Gallery = () => {

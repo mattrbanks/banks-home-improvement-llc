@@ -5,6 +5,7 @@ import ContactForm from "../components/contact-form";
 import Testimonials from "../components/testimonials";
 import Gallery from "../components/gallery";
 import ServicesComp from "../components/services";
+import TestimonialsMobile from "../components/testimonialsMobile";
 
 //import SEO from "../components/seo";
 //import ImageReusable from "../components/imageReusable";
@@ -34,11 +35,17 @@ const IndexPage = () => {
         <div className="w-full border">
           <Gallery />
         </div>
-        <div className="w-full">
+        <div className="w-full my-4">
           <ContactForm />
         </div>
-        <div className="w-full h-screen">
-          <Testimonials />
+        <div>
+          {/* <div className="hidden md:mx-auto md:block md:w-2/5">
+            <Testimonials />
+          </div> */}
+          {/* <div className="md:hidden"> */}
+          <div className="md:mx-auto md:block md:w-2/5">
+            <TestimonialsMobile />
+          </div>
         </div>
       </main>
     </Layout>

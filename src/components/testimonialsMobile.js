@@ -1,5 +1,5 @@
 import React from "react";
-import ImageReusableFixed from "./imageReusableFixed";
+import ImageReusable from "./imageReusable";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -15,30 +15,30 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const Testimonials = () => {
+const TestimonialsMobile = () => {
   return (
     <Slider {...settings} className="overflow-hidden max-w-3xl">
-      <ImageReusableFixed
+      <ImageReusable
         alt="picture of school site project"
         filename="image0.jpeg"
       />
-      <ImageReusableFixed
+      <ImageReusable
         alt="picture of school site project"
         filename="image0.jpeg"
       />
-      <ImageReusableFixed
+      <ImageReusable
         alt="picture of school site project"
         filename="image0.jpeg"
       />
-      <ImageReusableFixed
+      <ImageReusable
         alt="picture of school site project"
         filename="image0.jpeg"
       />
-      <ImageReusableFixed
+      <ImageReusable
         alt="picture of school site project"
         filename="image0.jpeg"
       />
-      <ImageReusableFixed
+      <ImageReusable
         alt="picture of school site project"
         filename="image0.jpeg"
       />
@@ -46,4 +46,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsMobile;
