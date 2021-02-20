@@ -81,14 +81,14 @@ const ContactForm = () => {
           defer
         ></script>
       </Helmet>
-      <div className="flex justify-center my-6 mx-6">
-        <div className="flex">
+      <div className="block mx-auto sm:w-3/4 my-6">
+        <div>
           <div>
-            <h2>
+            {/* <h2>
               This will display block above the contact form on small screens
               portrait
-            </h2>
-            <p>Contact us and get a quote today</p>
+            </h2> */}
+            <p className="mr-4 mb-4">Contact us and get a quote today</p>
           </div>
         </div>
         <form
@@ -101,7 +101,7 @@ const ContactForm = () => {
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <div className="w-4/5 md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="name"
@@ -118,7 +118,7 @@ const ContactForm = () => {
                 onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
-            <div className="w-full md:w-1/2 px-3">
+            <div className="w-4/5 md:w-1/2 px-3 mb-6">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="subject"
@@ -126,7 +126,7 @@ const ContactForm = () => {
                 Subject
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 name="subject"
                 type="text"
                 placeholder="subject"
@@ -135,7 +135,7 @@ const ContactForm = () => {
                 onChange={(e) => setSubject(e.target.value)}
               ></input>
             </div>
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <div className="w-4/5 md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="phone"
@@ -152,7 +152,7 @@ const ContactForm = () => {
                 onChange={(e) => setPhone(e.target.value)}
               ></input>
             </div>
-            <div className="w-full md:w-1/2 px-3">
+            <div className="w-4/5 md:w-1/2 px-3">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="email"
@@ -171,7 +171,7 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full px-3">
+            <div className="w-4/5 px-3">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="message"
@@ -193,8 +193,8 @@ const ContactForm = () => {
               <p className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 Attach an image of the job you want done
               </p>
-              <div className="flex items-center justify-center bg-grey-lighter">
-                <label className="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue-800 rounded-lg shadow-lg tracking-wide uppercase border border-blue-800 cursor-pointer hover:bg-blue-800 hover:text-white">
+              <div className="bg-grey-lighter">
+                <label className="w-56 mb-4 flex flex-col items-center px-4 py-6 bg-white text-blue-800 rounded-lg shadow-lg tracking-wide uppercase border border-blue-800 cursor-pointer hover:bg-blue-800 hover:text-white">
                   <svg
                     className="w-8 h-8"
                     fill="currentColor"

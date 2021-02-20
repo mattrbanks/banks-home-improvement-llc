@@ -3,11 +3,11 @@ import React from "react";
 const ServicesComp = () => {
   return (
     <React.Fragment>
-      <div className="flex justify-center">
+      <div className="flex justify-center mx-4">
         <div className="h-8 w-8 bg-red-800 mt-9 mr-2"></div>
         <p className="text-black font-bold text-5xl my-6">Services We Offer</p>
       </div>
-      <div className="flex justify-evenly my-6 mx-6">
+      <div className="block lg:flex lg:justify-evenly my-6 mx-auto sm:w-3/4 lg:w-full lg:mx-6">
         <div className="max-w-xl w-full lg:flex shadow-xl mb-8">
           <div
             className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
@@ -98,7 +98,7 @@ const ServicesComp = () => {
         </div>
       </div>
 
-      <div className="flex justify-evenly my-6 mx-6">
+      <div className="block lg:flex lg:justify-evenly my-6 mx-auto sm:w-3/4 lg:w-full lg:mx-6">
         <div className="max-w-xl w-full lg:flex shadow-xl mb-8">
           <div
             className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"

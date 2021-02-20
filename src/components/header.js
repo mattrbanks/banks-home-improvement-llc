@@ -2,15 +2,20 @@ import React from "react";
 import ImageReusable from "./imageReusable";
 import richlogo from "../images/richslogoblue.svg";
 import { Link } from "gatsby";
+import ServicesDropdown from "./servicesDropdown";
+import ServicesDropdownMobile from "./servicesDropdownMobile";
 
 const Header = () => {
+  const [openMenuMobile, setOpenMenuMobile] = React.useState(false);
+
   return (
-    <nav className="bg-blue-900 ">
+    <nav className="bg-blue-900">
       <div className="max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between">
-          <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
+        <div className="flex items-center justify-between">
+          <div className="fixed z-20 inset-y-0 h-10 bg-black rounded-full top-4 right-5 border border-red-800 flex items-center lg:hidden">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              onClick={() => setOpenMenuMobile(!openMenuMobile)}
+              className="focus:outline-none outline-none z-20 inline-flex items-center justify-center p-2 rounded-md text-white"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -62,7 +67,7 @@ const Header = () => {
               Rich's Property Maintenance LLC
             </div>
 
-            <div className="fixed right-0 z-10 hidden md:block md:ml-6">
+            <div className="fixed right-0 z-10 hidden lg:block lg:ml-6">
               <div className="flex space-x-4 bg-gray-900 rounded-md border border-red-800">
                 <Link
                   to="/"
@@ -76,12 +81,13 @@ const Header = () => {
                 >
                   About Us
                 </Link>
-                <Link
+                <ServicesDropdown />
+                {/* <Link
                   to="/services"
                   className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Services
-                </Link>
+                </Link> */}
                 <Link
                   to="/extended-gallery"
                   className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -124,40 +130,45 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="hidden sm:hidden">
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <Link
-            to="/"
-            className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            About Us
-          </Link>
-          <Link
-            to="/services"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Services
-          </Link>
-          <Link
-            to="extended-gallery"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Gallery
-          </Link>
-          <Link
-            to="/contact"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Contact
-          </Link>
+      {openMenuMobile ? (
+        <div className="bg-blue-900 fixed top-0 left-0 z-10 w-full h-screen overflow-hidden flex justify-center items-center">
+          <div className="relative px-2 pt-2 pb-3 space-y-1">
+            <Link
+              to="/"
+              className="text-2xl text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="text-2xl text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              About Us
+            </Link>
+            <ServicesDropdownMobile />
+            {/* <Link
+              to="/services"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Services
+            </Link> */}
+            <Link
+              to="extended-gallery"
+              className="text-2xl text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Gallery
+            </Link>
+            <Link
+              to="/contact"
+              className="text-2xl text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Contact
+            </Link>
+          </div>
         </div>
-      </div>
+      ) : (
+        ""
+      )}
     </nav>
 
     // <div className="z-10 w-full h-20 bg-white bg-opacity-90 absolute top-0 left-0 text-white border-b border-red-700 flex">

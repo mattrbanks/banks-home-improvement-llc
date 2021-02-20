@@ -30,14 +30,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {offsetY > 1 ? (
-        <React.Fragment>
-          {/* <Navbar /> */}
-          <Header siteTitle={data.site.siteMetadata.title} />
-        </React.Fragment>
-      ) : (
-        <Header siteTitle={data.site.siteMetadata.title} />
-      )}
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
       </div>
