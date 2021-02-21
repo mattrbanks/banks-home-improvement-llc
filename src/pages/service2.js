@@ -1,7 +1,12 @@
 import React from "react";
+import Layout from "../components/layout";
 
 const Service2 = () => {
-  return <div>Hello from service2</div>;
+  return (
+    <Layout>
+      <div className="h-screen">Hello from service2</div>
+    </Layout>
+  );
 };
 
 export default Service2;

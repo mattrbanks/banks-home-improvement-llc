@@ -4,6 +4,7 @@ import richlogo from "../images/richslogoblue.svg";
 import { Link } from "gatsby";
 import ServicesDropdown from "./servicesDropdown";
 import ServicesDropdownMobile from "./servicesDropdownMobile";
+import "./styles.css";
 
 const Header = () => {
   const [openMenuMobile, setOpenMenuMobile] = React.useState(false);
@@ -14,7 +15,23 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="fixed z-20 inset-y-0 h-10 bg-black rounded-full top-4 right-5 border border-red-800 flex items-center lg:hidden">
             <button
-              onClick={() => setOpenMenuMobile(!openMenuMobile)}
+              //   onClick={() => setOpenMenuMobile(!openMenuMobile)}
+              onClick={() => {
+                setOpenMenuMobile(!openMenuMobile);
+                if (openMenuMobile === true) {
+                  const modal = document.getElementById("mobile-menu-id");
+                  modal.classList.remove("animate-opacity");
+                  modal.classList.add("animate-opacity-close");
+                  setTimeout(function () {
+                    modal.style.display = "none";
+                  }, 700);
+                } else {
+                  const modal = document.getElementById("mobile-menu-id");
+                  modal.classList.remove("animate-opacity-close");
+                  modal.classList.add("animate-opacity");
+                  modal.style.display = "flex";
+                }
+              }}
               className="focus:outline-none outline-none z-20 inline-flex items-center justify-center p-2 rounded-md text-white"
               aria-expanded="false"
             >
@@ -54,11 +71,13 @@ const Header = () => {
             </button>
           </div>
           <div className="flex-1 flex items-center sm:items-stretch">
-            <div className="bg-white border border-gray-900 rounded-3xl flex-shrink-0 flex items-center">
-              <img className="w-10 mx-4 my-4" alt="mb logo" src={richlogo} />
-              {/* <img className="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
+            <Link to="/">
+              <div className="bg-white border border-gray-900 rounded-3xl flex-shrink-0 flex items-center">
+                <img className="w-10 mx-4 my-4" alt="mb logo" src={richlogo} />
+                {/* <img className="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
           <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" /> */}
-            </div>
+              </div>
+            </Link>
 
             <div
               style={{ textDecoration: "underline #991B1B" }}
@@ -131,7 +150,10 @@ const Header = () => {
       </div>
 
       {openMenuMobile ? (
-        <div className="bg-blue-900 fixed top-0 left-0 z-10 w-full h-screen overflow-hidden flex justify-center items-center">
+        <div
+          id="mobile-menu-id"
+          className="animate-opacity bg-blue-900 fixed top-0 left-0 z-10 w-full h-screen overflow-hidden flex justify-center items-center"
+        >
           <div className="relative px-2 pt-2 pb-3 space-y-1">
             <Link
               to="/"
@@ -167,7 +189,44 @@ const Header = () => {
           </div>
         </div>
       ) : (
-        ""
+        <div
+          id="mobile-menu-id"
+          className="animate-opacity-close hidden bg-blue-900 fixed top-0 left-0 z-10 w-full h-screen overflow-hidden flex justify-center items-center"
+        >
+          <div className="relative px-2 pt-2 pb-3 space-y-1">
+            <Link
+              to="/"
+              className="text-2xl text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="text-2xl text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              About Us
+            </Link>
+            <ServicesDropdownMobile />
+            {/* <Link
+              to="/services"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Services
+            </Link> */}
+            <Link
+              to="extended-gallery"
+              className="text-2xl text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Gallery
+            </Link>
+            <Link
+              to="/contact"
+              className="text-2xl text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
       )}
     </nav>
 
