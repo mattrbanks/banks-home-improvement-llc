@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 const Service1 = () => {
   return (
     <Layout>
-      <div className="block mx-auto w-1/5 my-8 text-2xl">
+      <div className="block mx-auto w-11/12 lg:w-3/5 my-8 text-2xl">
         <div>
           <a
             className="block w-96 h-40 bg-grey-dark bg-no-repeat bg-center bg-cover"
