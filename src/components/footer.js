@@ -27,7 +27,10 @@ const Footer = () => {
               </a>
             </div>
             <div className="rounded-full bg-blue-800 text-white text-center p-2 hover:bg-black mt-8">
-              <a href="tel:+496170961709" className="block">
+              <a
+                href="https://www.facebook.com/carmena.damico"
+                className="block"
+              >
                 <FaFacebookF
                   style={{
                     fontSize: "70px",

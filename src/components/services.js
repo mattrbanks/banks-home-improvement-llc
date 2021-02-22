@@ -8,7 +8,7 @@ const ServicesComp = () => {
         <div className="h-8 w-8 bg-red-800 mt-9 mr-2"></div>
         <p className="text-black font-bold text-5xl my-6">Services We Offer</p>
       </div>
-      <div className="block lg:flex lg:justify-evenly my-6 mx-auto sm:w-1/2 lg:w-full lg:mx-6">
+      <div className="block lg:flex lg:justify-evenly my-6 mx-auto sm:w-3/4 lg:w-full lg:mx-6">
         <Link to="/service1">
           <div className="max-w-xl w-full lg:flex shadow-xl mb-8">
             <div

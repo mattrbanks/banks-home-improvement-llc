@@ -5,7 +5,9 @@ import ContactForm from "../components/contact-form";
 const Contact = () => {
   return (
     <Layout>
-      <ContactForm />
+      <div className="w-full my-4 mx-4">
+        <ContactForm />
+      </div>
     </Layout>
   );
 };

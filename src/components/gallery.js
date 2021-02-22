@@ -66,19 +66,19 @@ const Gallery = () => {
       />
       <ImageReusable
         alt="picture of school site project"
-        filename="IMG_3968001.jpg"
+        filename="image3(3).jpeg"
       />
       <ImageReusable
         alt="picture of school site project"
-        filename="IMG_3968001.jpg"
+        filename="image2(1).jpeg"
       />
       <ImageReusable
         alt="picture of school site project"
-        filename="IMG_3968001.jpg"
+        filename="image0(4).jpeg"
       />
       <ImageReusable
         alt="picture of school site project"
-        filename="IMG_3968001.jpg"
+        filename="image9(3).jpeg"
       />
     </Slider>
   );

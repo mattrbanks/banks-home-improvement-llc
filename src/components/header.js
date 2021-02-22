@@ -175,7 +175,7 @@ const Header = () => {
               Services
             </Link> */}
             <Link
-              to="extended-gallery"
+              to="/extended-gallery"
               className="text-2xl text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Gallery
@@ -214,7 +214,7 @@ const Header = () => {
               Services
             </Link> */}
             <Link
-              to="extended-gallery"
+              to="/extended-gallery"
               className="text-2xl text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Gallery

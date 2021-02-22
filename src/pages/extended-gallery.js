@@ -14,7 +14,7 @@ const ExtendedGallery = () => {
                 title="Link"
                 style={{
                   backgroundImage:
-                    "url('https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Image')",
+                    "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/IMG_3967001.jpg?raw=true')",
                 }}
               >
                 Link
@@ -29,7 +29,7 @@ const ExtendedGallery = () => {
                     title="Link"
                     style={{
                       backgroundImage:
-                        "url('https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Image')",
+                        "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/IMG_3968001.jpg?raw=true')",
                     }}
                   >
                     Link
@@ -42,7 +42,7 @@ const ExtendedGallery = () => {
                     title="Link"
                     style={{
                       backgroundImage:
-                        "url('https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Image')",
+                        "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image3(3).jpeg?raw=true')",
                     }}
                   >
                     Link
@@ -57,7 +57,7 @@ const ExtendedGallery = () => {
                 title="Link"
                 style={{
                   backgroundImage:
-                    "url('https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Image')",
+                    "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image2(1).jpeg?raw=true')",
                 }}
               >
                 Link
@@ -70,7 +70,7 @@ const ExtendedGallery = () => {
                 title="Link"
                 style={{
                   backgroundImage:
-                    "url('https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Image')",
+                    "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image0(4).jpeg?raw=true')",
                 }}
               >
                 Link
@@ -83,7 +83,7 @@ const ExtendedGallery = () => {
                 title="Link"
                 style={{
                   backgroundImage:
-                    "url('https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Image')",
+                    "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image9(3).jpeg?raw=true')",
                 }}
               >
                 Link

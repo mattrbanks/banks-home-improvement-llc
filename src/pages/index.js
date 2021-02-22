@@ -33,6 +33,9 @@ const IndexPage = () => {
         <div className="w-full">
           <ServicesComp />
         </div>
+        <div className="text-center bg-blue-900 text-white p-6 text-2xl mb-4">
+          <p>Here is some of our work</p>
+        </div>
         <div className="w-full">
           <Gallery />
         </div>
