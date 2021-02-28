@@ -17,7 +17,7 @@ const ServicesComp = () => {
                 backgroundImage:
                   "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/IMG_3971001.jpg?raw=true')",
               }}
-              title="Woman holding a mug"
+              title="Residential Cleanout Job"
             ></div>
             <div className="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div className="mb-8">
@@ -64,7 +64,7 @@ const ServicesComp = () => {
                 backgroundImage:
                   "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image11.jpeg?raw=true')",
               }}
-              title="Woman holding a mug"
+              title="Home Maintenance Job"
             ></div>
             <div className="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div className="mb-8">
@@ -112,7 +112,7 @@ const ServicesComp = () => {
                 backgroundImage:
                   "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image2(1).jpeg?raw=true')",
               }}
-              title="Woman holding a mug"
+              title="Moving Job"
             ></div>
             <div className="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div className="mb-8">
@@ -158,7 +158,7 @@ const ServicesComp = () => {
                 backgroundImage:
                   "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image3_1.jpeg?raw=true')",
               }}
-              title="Woman holding a mug"
+              title="Landscaping Job"
             ></div>
             <div className="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div className="mb-8">

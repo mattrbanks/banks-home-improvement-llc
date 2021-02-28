@@ -6,17 +6,14 @@ const Service3 = () => {
     <Layout>
       <div className="block mx-auto w-11/12 lg:w-3/5 my-8 text-2xl">
         <div>
-          <a
+          <div
             className="block w-96 h-40 bg-grey-dark bg-no-repeat bg-center bg-cover"
-            href="#"
-            title="Link"
+            title="Real Moving Job"
             style={{
               backgroundImage:
-                "url('https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Image')",
+                "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image2(1).jpeg?raw=true')",
             }}
-          >
-            Picture of Limited Moving.
-          </a>
+          ></div>
         </div>
 
         <p>Here is where we break down the Limited Moving service.</p>

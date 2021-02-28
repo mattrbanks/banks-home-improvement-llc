@@ -6,17 +6,14 @@ const Service1 = () => {
     <Layout>
       <div className="block mx-auto w-11/12 lg:w-3/5 my-8 text-2xl">
         <div>
-          <a
-            className="block w-96 h-40 bg-grey-dark bg-no-repeat bg-center bg-cover"
-            href="#"
-            title="Link"
+          <div
+            className="text-white block w-96 h-40 bg-grey-dark bg-no-repeat bg-center bg-cover"
+            title="Real Residential Cleanout Job"
             style={{
               backgroundImage:
-                "url('https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Image')",
+                "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/IMG_3971001.jpg?raw=true')",
             }}
-          >
-            Picture of Residential Cleanouts.
-          </a>
+          ></div>
         </div>
 
         <p>Here is where we break down the Residential Cleanouts service.</p>
