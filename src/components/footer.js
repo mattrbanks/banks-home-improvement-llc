@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="block md:flex md:justify-evenly">
           <div className="flex justify-center m-4">
             <div className="rounded-full bg-blue-800 text-white text-center p-2 hover:bg-black mt-8 mr-4">
-              <a href="tel:+496170961709" className="block">
+              <a href="tel:+1860-518-4302" className="block">
                 <FaPhone
                   style={{
                     fontSize: "70px",

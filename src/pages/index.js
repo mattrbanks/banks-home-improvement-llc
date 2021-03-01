@@ -24,7 +24,7 @@ const IndexPage = () => {
           </div>
           <div className="flex justify-center">
             <div className="rounded-md bg-blue-800 text-white hover:text-black text-center p-2 hover:bg-yellow-400 mt-8">
-              <a className="block" href="tel:+496170961709">
+              <a className="block" href="tel:+1860-518-4302">
                 <p>Get A Free Quote: (860) 518-4302</p>
               </a>
             </div>
