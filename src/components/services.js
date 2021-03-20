@@ -15,7 +15,7 @@ const ServicesComp = () => {
               className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
               style={{
                 backgroundImage:
-                  "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/IMG_3971001.jpg?raw=true')",
+                  "url('https://github.com/mattrbanks/banks-home-improvement-llc/blob/master/src/images/deck.jpg?raw=true')",
               }}
               title="Residential Cleanout Job"
             ></div>
@@ -62,7 +62,7 @@ const ServicesComp = () => {
               className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
               style={{
                 backgroundImage:
-                  "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image11.jpeg?raw=true')",
+                  "url('https://github.com/mattrbanks/banks-home-improvement-llc/blob/master/src/images/drill.jpg?raw=true')",
               }}
               title="Home Maintenance Job"
             ></div>
@@ -110,7 +110,7 @@ const ServicesComp = () => {
               className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
               style={{
                 backgroundImage:
-                  "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image2(1).jpeg?raw=true')",
+                  "url('https://github.com/mattrbanks/banks-home-improvement-llc/blob/master/src/images/saw.jpg?raw=true')",
               }}
               title="Moving Job"
             ></div>
@@ -156,7 +156,7 @@ const ServicesComp = () => {
               className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
               style={{
                 backgroundImage:
-                  "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/image3_1.jpeg?raw=true')",
+                  "url('https://github.com/mattrbanks/banks-home-improvement-llc/blob/master/src/images/wall.jpg?raw=true')",
               }}
               title="Landscaping Job"
             ></div>

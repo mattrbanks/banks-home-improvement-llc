@@ -13,19 +13,19 @@ const IndexPage = () => {
     <Layout>
       <main className="overflow-hidden">
         <title>BHI Home</title>
-        <div className="h-screen bg-main-img relative"></div>
+        <div className="h-screen bg-main-img bg-cover relative"></div>
         <div className="text-center">
           <div className="p-6 w-full bg-black text-white text-xl">
             We practice social distancing and follow all the guidelines from the
             CDC and WHO. Our goal is for you to have a safe and stress free
             experience. <br />
-            We are licensed and bonded with 25+ years experienced in the
+            We are licensed and bonded with 20+ years of experience in the
             business.
           </div>
           <div className="flex justify-center">
             <div className="rounded-md bg-blue-800 text-white hover:text-black text-center p-2 hover:bg-yellow-400 mt-8">
-              <a className="block" href="tel:+1860-518-4302">
-                <p>Get A Free Quote: (860) 518-4302</p>
+              <a className="block" href="tel:+1860-638-8176">
+                <p>Get A Free Quote: (860) 638-8176</p>
               </a>
             </div>
           </div>
