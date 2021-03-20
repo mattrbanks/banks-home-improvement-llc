@@ -12,8 +12,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <main className="overflow-hidden">
-        <title>RPM Home</title>
-        <div className="h-screen bg-main-img bg-cover relative"></div>
+        <title>BHI Home</title>
+        <div className="h-screen bg-main-img relative"></div>
         <div className="text-center">
           <div className="p-6 w-full bg-black text-white text-xl">
             We practice social distancing and follow all the guidelines from the

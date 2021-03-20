@@ -83,7 +83,7 @@ const Header = () => {
               style={{ textDecoration: "underline #991B1B" }}
               className="text-white mx-5 my-5 md:text-xl lg:text-2xl w-1/2"
             >
-              Rich's Property Maintenance LLC
+              Banks Home Improvement LLC
             </div>
 
             <div className="fixed right-0 z-10 hidden lg:block lg:ml-6">

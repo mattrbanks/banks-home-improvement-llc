@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         "main-img":
-          "url('https://github.com/mattrbanks/richs-property-maintenance-llc/blob/master/src/images/richsheaderimage.png?raw=true')",
+          "url('https://github.com/mattrbanks/banks-home-improvement-llc/blob/master/src/images/house.jpg?raw=true')",
       }),
     },
   },
