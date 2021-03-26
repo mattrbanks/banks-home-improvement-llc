@@ -10,7 +10,7 @@ const Header = () => {
   const [openMenuMobile, setOpenMenuMobile] = React.useState(false);
 
   return (
-    <nav className="bg-blue-900">
+    <nav className="bg-gray-900">
       <div className="max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="fixed z-20 inset-y-0 h-10 bg-black rounded-full top-4 right-5 border border-red-800 flex items-center lg:hidden">
